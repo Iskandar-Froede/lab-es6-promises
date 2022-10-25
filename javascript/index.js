@@ -109,13 +109,10 @@ obtainInstruction('steak', 0)
 
 // Iteration 3 using async/await
 async function makeBroccoli() {
-  try {
 
+try {                                         // try & catch (pair keywords)
 
-// try & catch (pair keywords)
-// needs variable to store the promise
-
-let step0 = await obtainInstruction('broccoli', 0)
+let step0 = await obtainInstruction('broccoli', 0)    // needs variable to store the promise
 document.querySelector('#broccoli').innerHTML += `<li>${step0}</li>`
 
 let step1 = await obtainInstruction('broccoli', 1)
@@ -146,6 +143,26 @@ document.querySelector('#broccoli').innerHTML += `<li>Broccoli is ready!</li>`
 makeBroccoli();  
 
 
+// Bonus 1 
+
 
 // Bonus 2 - Promise all
-// ...
+
+/*
+
+const stepSprout0 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step0}</li>`;
+const stepSprout1 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step1}</li>`;
+const stepSprout2 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step2}</li>`;
+const stepSprout3 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step3}</li>`;
+const stepSprout4 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step4}</li>`;
+const stepsprout5 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step5}</li>`;
+const stepSprout6 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step6}</li>`;
+const stepSprout7 = document.querySelector('#brusselsSprouts').innerHTML += `<li>${step7}</li>`;
+
+
+Promise.all(gps)
+    .then((instructions) => {
+        console.log(instructions);
+    })
+    .catch();
+*/
